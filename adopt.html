@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Listing Form | PetCare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #f5f7fb;
+            color: #182033;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            min-height: 75px;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        .form-error {
+            color: #dc3545;
+            display: block;
+            font-size: 0.875rem;
+            margin-top: 0.35rem;
+        }
+
+        .choice-row.is-invalid label {
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-3 text-light" href="index.html">PetCare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="adopt-hero">
+        <div class="container">
+            <h1>Pet adoption</h1>
+            <p>List a pet that needs a home or apply to adopt one. Both forms are simple, responsive, and focused on the details our team needs.</p>
+        </div>
+    </header>
+
+    <div class="container form-wrap">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <form class="listing-card" id="petListingForm" novalidate>
+                    <div class="form-title">
+                        <h2><i class="fa-solid fa-paw me-2"></i>Pet Listing Form</h2>
+                        <p>Simple details are enough to start the adoption process.</p>
+                    </div>
+
+                    <div class="form-body">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label" for="petName">Pet Name <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="petName" placeholder="Example: Bruno" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="petType">Pet Type <span class="required">*</span></label>
+                                <select class="form-select" id="petType" required>
+                                    <option value="" selected disabled>Select pet type</option>
+                                    <option>Dog</option>
+                                    <option>Cat</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="petAge">Age <span class="required">*</span></label>
+                                <select class="form-select" id="petAge" required>
+                                    <option value="" selected disabled>Select age</option>
+                                    <option>Under 6 months</option>
+                                    <option>6 months to 1 year</option>
+                                    <option>1 to 3 years</option>
+                                    <option>3 years and above</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="breed">Breed</label>
+                                <input type="text" class="form-control" id="breed" placeholder="Example: Indie / Labrador mix">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label d-block">Gender <span class="required">*</span></label>
+                                <div class="choice-row">
+                                    <div>
+                                        <input type="radio" name="gender" id="male" required>
+                                        <label for="male"><i class="fa-solid fa-mars"></i> Male</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="gender" id="female">
+                                        <label for="female"><i class="fa-solid fa-venus"></i> Female</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label d-block">Vaccinated <span class="required">*</span></label>
+                                <div class="choice-row">
+                                    <div>
+                                        <input type="radio" name="vaccinated" id="vaccinatedYes" required>
+                                        <label for="vaccinatedYes">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="vaccinated" id="vaccinatedNo">
+                                        <label for="vaccinatedNo">No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="description">Pet Caption / Description <span class="required">*</span></label>
+                                <textarea class="form-control" id="description" placeholder="Write a short caption about the pet's nature, health, habits, and adoption needs." required></textarea>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="contactName">Contact Person <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="contactName" placeholder="Your name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" class="form-control" id="phone" placeholder="10-digit phone number" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="city">City / State <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="city" placeholder="Example: Kochi, Kerala" required>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-submit-listing">
+                                    <i class="fa-solid fa-clipboard-check me-2"></i>Submit Listing
+                                </button>
+                            </div>
+
+                            <div class="col-12">
+                                <p class="small-note">Required fields are marked with an asterisk. Please check all details before submitting.</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="listing-card form-gap" id="adoptionRequestForm" novalidate>
+                    <div class="form-title adoption-title">
+                        <h2><i class="fa-solid fa-house-heart me-2"></i>Pet Adoption Request Form</h2>
+                        <p>Tell us what kind of pet you want to adopt and how we can contact you.</p>
+                    </div>
+
+                    <div class="form-body">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label" for="adopterName">Full Name <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="adopterName" placeholder="Your full name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="adopterPhone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" class="form-control" id="adopterPhone" placeholder="10-digit phone number" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="adopterEmail">Email <span class="required">*</span></label>
+                                <input type="email" class="form-control" id="adopterEmail" placeholder="name@example.com" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="adopterCity">City / State <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="adopterCity" placeholder="Example: Kochi, Kerala" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="preferredPet">Preferred Pet <span class="required">*</span></label>
+                                <select class="form-select" id="preferredPet" required>
+                                    <option value="" selected disabled>Select pet</option>
+                                    <option>Dog</option>
+                                    <option>Cat</option>
+                                    <option>Any pet</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="preferredAge">Preferred Age</label>
+                                <select class="form-select" id="preferredAge">
+                                    <option selected>Any age</option>
+                                    <option>Under 6 months</option>
+                                    <option>6 months to 1 year</option>
+                                    <option>1 to 3 years</option>
+                                    <option>3 years and above</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label d-block">Do you have pets already? <span class="required">*</span></label>
+                                <div class="choice-row">
+                                    <div>
+                                        <input type="radio" name="hasPets" id="hasPetsYes" required>
+                                        <label for="hasPetsYes">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="hasPets" id="hasPetsNo">
+                                        <label for="hasPetsNo">No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label d-block">Home Type <span class="required">*</span></label>
+                                <div class="choice-row">
+                                    <div>
+                                        <input type="radio" name="homeType" id="homeFlat" required>
+                                        <label for="homeFlat">Flat</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="homeType" id="homeHouse">
+                                        <label for="homeHouse">House</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="adoptionReason">Why do you want to adopt? <span class="required">*</span></label>
+                                <textarea class="form-control" id="adoptionReason" placeholder="Share your reason, pet care experience, and any preferences." required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-submit-listing">
+                                    <i class="fa-solid fa-paper-plane me-2"></i>Submit Adoption Request
+                                </button>
+                            </div>
+
+                            <div class="col-12">
+                                <p class="small-note">Our team will review your request and contact you when a suitable pet is available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- to top -->
+     <a href="#" class="btn btn-lg btn-primary back-to-top">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+
+
+            <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-xl-9">
+                        <div class="mb-5">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-6 col-xl-5">
+                                    <div class="footer-item">
+                                        <a href="index.html" class="p-0">
+                                            <h3 class="text-white"><i class="fab fa-slack me-3"></i> Petshop</h3>
+                                            <!-- <img src="img/logo.png" alt="Logo"> -->
+                                        </a>
+                                        <p class="text-white mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                                         <div class="footer-btn d-flex">
+                                            <a class="btn btn-xl-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <div class="row g-4">
+
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Address</h4>
+                                                    <p class="mb-0 text-white">123 Street kerala<br>India</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fas fa-envelope fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Mail Us</h4>
+                                                    <p class="mb-0 text-white">info@example.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fa fa-phone-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Telephone</h4>
+                                                    <p class="mb-0 text-white">(+91)844565556</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Newsletter</h4>
+                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="position-relative rounded-pill mb-4">
+                                <input id="newsletterEmail" class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" required>
+                                <button type="button" id="newsletterBtn" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                                <div id="newsletterError" class="mt-2 small text-white"></div>
+                            </div>
+                            <div class="d-flex flex-shrink-0">
+                                <div class="footer-btn">
+                                    <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                                        <i class="fa fa-phone-alt fa-2x"></i>
+                                
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-column ms-3 flex-shrink-0">
+                                    <span class="text-white" >Call to Our Experts</span>
+                                    <a href="tel:+ 0123 456 7890"><span class="text-white">Free: +91 8685459565</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+
+     <!-- Footer Start -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>© 2026 Pet Care. All Rights Reserved.</p>
+    </footer>
+    <!-- Footer End -->
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="animations.js"></script>
+    <script>
+        $(document).ready(function() {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phonePattern = /^\d{10}$/;
+            const namePattern = /^[A-Za-z\s.'-]{2,}$/;
+
+            function clearFormErrors($form) {
+                $form.find('.form-error').remove();
+                $form.find('.is-invalid').removeClass('is-invalid');
+            }
+
+            function showFieldError($field, message) {
+                $field.addClass('is-invalid');
+                $field.after('<span class="form-error">' + message + '</span>');
+            }
+
+            function validateRequired($form, selector, message) {
+                const $field = $form.find(selector);
+
+                if (!$field.val() || !$field.val().trim()) {
+                    showFieldError($field, message);
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validateSelect($form, selector, message) {
+                const $field = $form.find(selector);
+
+                if (!$field.val()) {
+                    showFieldError($field, message);
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validateRadio($form, name, message) {
+                const $fields = $form.find('input[name="' + name + '"]');
+                const $group = $fields.first().closest('.choice-row');
+
+                if (!$fields.is(':checked')) {
+                    $group.addClass('is-invalid');
+                    $group.after('<span class="form-error">' + message + '</span>');
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validatePhone($form, selector, message) {
+                const $field = $form.find(selector);
+                const value = $field.val().trim();
+
+                if (!phonePattern.test(value)) {
+                    showFieldError($field, message);
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validateEmail($form, selector, message, required) {
+                const $field = $form.find(selector);
+                const value = $field.val().trim();
+
+                if ((required || value) && !emailPattern.test(value)) {
+                    showFieldError($field, message);
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validateName($form, selector, message) {
+                const $field = $form.find(selector);
+                const value = $field.val().trim();
+
+                if (!namePattern.test(value)) {
+                    showFieldError($field, message);
+                    return false;
+                }
+
+                return true;
+            }
+
+            function validateMinLength($form, selector, minLength, message) {
+                const $field = $form.find(selector);
+
+                if ($field.val().trim().length < minLength) {
+                    showFieldError($field, message);
+                    return false;
+                }
+
+                return true;
+            }
+
+            function focusFirstError($form) {
+                const $firstError = $form.find('.is-invalid').first();
+
+                if ($firstError.length) {
+                    $('html, body').animate({
+                        scrollTop: $firstError.offset().top - 100
+                    }, 300);
+                    $firstError.focus();
+                }
+            }
+
+            $('#petListingForm').on('submit', function(e) {
+                e.preventDefault();
+
+                const $form = $(this);
+                let isValid = true;
+
+                clearFormErrors($form);
+
+                isValid = validateName($form, '#petName', 'Please enter a valid pet name.') && isValid;
+                isValid = validateSelect($form, '#petType', 'Please select a pet type.') && isValid;
+                isValid = validateSelect($form, '#petAge', 'Please select the pet age.') && isValid;
+                isValid = validateRadio($form, 'gender', 'Please select the pet gender.') && isValid;
+                isValid = validateRadio($form, 'vaccinated', 'Please select vaccination status.') && isValid;
+                isValid = validateMinLength($form, '#description', 15, 'Please enter at least 15 characters about the pet.') && isValid;
+                isValid = validateName($form, '#contactName', 'Please enter a valid contact person name.') && isValid;
+                isValid = validatePhone($form, '#phone', 'Please enter a valid 10-digit phone number.') && isValid;
+                isValid = validateEmail($form, '#email', 'Please enter a valid email address.', false) && isValid;
+                isValid = validateRequired($form, '#city', 'Please enter city and state.') && isValid;
+
+                if (!isValid) {
+                    focusFirstError($form);
+                    return;
+                }
+
+                alert('Pet listing submitted successfully!');
+                this.reset();
+            });
+
+            $('#adoptionRequestForm').on('submit', function(e) {
+                e.preventDefault();
+
+                const $form = $(this);
+                let isValid = true;
+
+                clearFormErrors($form);
+
+                isValid = validateName($form, '#adopterName', 'Please enter your full name.') && isValid;
+                isValid = validatePhone($form, '#adopterPhone', 'Please enter a valid 10-digit phone number.') && isValid;
+                isValid = validateEmail($form, '#adopterEmail', 'Please enter a valid email address.', true) && isValid;
+                isValid = validateRequired($form, '#adopterCity', 'Please enter city and state.') && isValid;
+                isValid = validateSelect($form, '#preferredPet', 'Please select your preferred pet.') && isValid;
+                isValid = validateRadio($form, 'hasPets', 'Please choose yes or no.') && isValid;
+                isValid = validateRadio($form, 'homeType', 'Please select your home type.') && isValid;
+                isValid = validateMinLength($form, '#adoptionReason', 15, 'Please enter at least 15 characters about your adoption reason.') && isValid;
+
+                if (!isValid) {
+                    focusFirstError($form);
+                    return;
+                }
+
+                alert('Adoption request submitted successfully!');
+                this.reset();
+            });
+
+            $('.listing-card input, .listing-card select, .listing-card textarea').on('input change', function() {
+                const $field = $(this);
+
+                $field.removeClass('is-invalid');
+                $field.next('.form-error').remove();
+
+                if ($field.is(':radio')) {
+                    const $group = $field.closest('.choice-row');
+                    $group.removeClass('is-invalid');
+                    $group.next('.form-error').remove();
+                }
+            });
+           
+            function isInViewport(el) {
+                var elementTop = $(el).offset().top;
+                var elementBottom = elementTop + $(el).outerHeight();
+                var viewportTop = $(window).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            }
+
+           
+            function triggerAnimations() {
+                $('.wow').each(function() {
+                    if (isInViewport(this) && !$(this).hasClass('animate__animated')) {
+                        var animationClass = $(this).attr('class').split(' ').filter(function(cls) {
+                            return cls.startsWith('fadeIn') || cls.startsWith('slideIn') || cls.startsWith('zoomIn');
+                        })[0];
+                        $(this).addClass('animate__animated animate__' + animationClass);
+                    }
+                });
+            }
+
+            // Trigger on scroll
+            $(window).on('scroll', function() {
+                triggerAnimations();
+            });
+
+            $('#newsletterBtn').on('click', function () {
+                const email = $('#newsletterEmail').val().trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                $('#newsletterError').text('').removeClass('text-danger text-success').addClass('text-white');
+                $('#newsletterEmail').removeClass('is-invalid');
+
+                if (!emailPattern.test(email)) {
+                    $('#newsletterEmail').addClass('is-invalid');
+                    $('#newsletterError').text('Please enter a valid email address.').removeClass('text-white').addClass('text-danger');
+                } else {
+                    $('#newsletterError').text('Thank you for subscribing!').removeClass('text-white').addClass('text-success');
+                    $('#newsletterEmail').val('');
+                }
+            });
+
+            $('#newsletterEmail').on('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    $('#newsletterBtn').trigger('click');
+                }
+            });
+
+            // Trigger on page load
+            triggerAnimations();
+        });
+
+            <!-- scroll to top -->
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-to-top').fadeIn();
+        } else {
+            $('.back-to-top').fadeOut();
+        }
+    });
+    $('.back-to-top').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+           
+    </script>
+
+    
+</body>
+</html>

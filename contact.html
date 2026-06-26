@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+</head>
+
+<body>
+      <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand  fw-bold fs-3 text-light" href="#" >PetCare</a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-light display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">contact Us</h4>
+            </div>
+        </div>
+    
+        
+         <!-- Contact Start -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                 
+                    <h1 class="display-4 mb-4">If you have any comments please apply now</h1>
+                </div>
+                <div class="row g-5">
+                    
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                        <div>
+                            <h4 class="text-primary">Send Your Message</h4>
+                            <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done</p>
+                            <form id="contactPageForm">
+                                <div class="row g-3">
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="name" name="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                        <div class="form-error text-danger mt-1" id="nameError"></div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                        <div class="form-error text-danger mt-1" id="emailError"></div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="phone" name="phone" placeholder="Phone">
+                                            <label for="phone">Your Phone</label>
+                                        </div>
+                                        <div class="form-error text-danger mt-1" id="phoneError"></div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="project" name="project" placeholder="Project">
+                                            <label for="project">Your Project</label>
+                                        </div>
+                                        <div class="form-error text-danger mt-1" id="projectError"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="subject" name="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                        <div class="form-error text-danger mt-1" id="subjectError"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control border-0" placeholder="Leave a message here" id="message" name="message" style="height: 120px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                        <div class="form-error text-danger mt-1" id="messageError"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="contact-img d-flex justify-content-center">
+                            <div class="contact-img-inner">
+                                <img src="images/pexels-natalia-sevruk-636238602-36279711.jpg" class="img-fluid w-75" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div>
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="contact-add-item">
+                                        <div class="contact-icon text-warning mb-4">
+                                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Address</h4>
+                                            <p class="mb-0">123 Street.INDIA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="contact-add-item">
+                                        <div class="contact-icon text-warning mb-4">
+                                            <i class="fas fa-envelope fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Mail Us</h4>
+                                            <p class="mb-0">info@example.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
+                                    <div class="contact-add-item">
+                                        <div class="contact-icon text-warning mb-4">
+                                            <i class="fa fa-phone-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Telephone</h4>
+                                            <p class="mb-0">(+91) 8556 789055</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
+                                    <div class="contact-add-item">
+                                        <div class="contact-icon text-warning mb-4">
+                                            <i class="fab fa-firefox-browser fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Yoursite@ex.com</h4>
+                                            <p class="mb-0">(+91)8457846592</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+         <!-- to top -->
+     <a href="#" class="btn btn-lg btn-primary back-to-top">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+
+
+               <!-- Footer Start -->
+        <div class="container-fluid bg-secondary footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-xl-9">
+                        <div class="mb-5">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-6 col-xl-5">
+                                    <div class="footer-item">
+                                        <a href="index.html" class="p-0">
+                                            <h3 class="text-white"><i class="fab fa-slack me-3"></i> Petshop</h3>
+
+                                        </a>
+                                        <p class="text-white mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                                         <div class="footer-btn d-flex">
+                                            <a class="btn btn-xl-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <div class="row g-4">
+
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Address</h4>
+                                                    <p class="mb-0 text-white">123 Street kerala<br>India</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fas fa-envelope fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Mail Us</h4>
+                                                    <p class="mb-0 text-white">info@example.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fa fa-phone-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Telephone</h4>
+                                                    <p class="mb-0 text-white">(+91)844565556</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Newsletter</h4>
+                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="position-relative rounded-pill mb-4">
+                                <input id="newsletterEmail" class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" required>
+                                <button type="button" id="newsletterBtn" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                                <div id="newsletterError" class="mt-2 small text-white"></div>
+                            </div>
+                            <div class="d-flex flex-shrink-0">
+                                <div class="footer-btn">
+                                    <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                                        <i class="fa fa-phone-alt fa-2x"></i>
+                                        <div class="position-absolute" style="top: 2px; right: 12px;">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-column ms-3 flex-shrink-0">
+                                    <span class="text-white" >Call to Our Experts</span>
+                                    <a href="tel:+ 0123 456 7890"><span class="text-white">Free: +91 8685459565</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+
+         <!-- Footer Start -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>© 2026 Pet Care. All Rights Reserved.</p>
+    </footer>
+    <!-- Footer End -->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="animations.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contactPageForm').on('submit', function(e) {
+                e.preventDefault();
+
+                $('.form-error').text('');
+                $('.form-control').removeClass('is-invalid');
+
+                let isValid = true;
+                const name = $('#name').val().trim();
+                const email = $('#email').val().trim();
+                const phone = $('#phone').val().trim();
+                const project = $('#project').val().trim();
+                const subject = $('#subject').val().trim();
+                const message = $('#message').val().trim();
+
+                if (name.length < 3 || !/^[A-Za-z\s]+$/.test(name)) {
+                    $('#name').addClass('is-invalid');
+                    $('#nameError').text('Please enter a valid name with letters only.');
+                    isValid = false;
+                }
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    $('#email').addClass('is-invalid');
+                    $('#emailError').text('Please enter a valid email address.');
+                    isValid = false;
+                }
+
+                if (!/^\d{10}$/.test(phone)) {
+                    $('#phone').addClass('is-invalid');
+                    $('#phoneError').text('Please enter a valid 10-digit phone number.');
+                    isValid = false;
+                }
+
+                if (project.length < 3) {
+                    $('#project').addClass('is-invalid');
+                    $('#projectError').text('Please enter your project name.');
+                    isValid = false;
+                }
+
+                if (subject.length < 3) {
+                    $('#subject').addClass('is-invalid');
+                    $('#subjectError').text('Please enter a subject.');
+                    isValid = false;
+                }
+
+                if (message.length < 10) {
+                    $('#message').addClass('is-invalid');
+                    $('#messageError').text('Please enter at least 10 characters.');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert('Message sent successfully!');
+                    this.reset();
+                }
+            });
+
+            $('.contact').css('opacity', 0).animate({ opacity: 1 }, 800, function() {
+                $('#name').focus();
+            });
+
+            $('#newsletterBtn').on('click', function () {
+                const email = $('#newsletterEmail').val().trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                $('#newsletterError').text('').removeClass('text-danger text-success').addClass('text-white');
+                $('#newsletterEmail').removeClass('is-invalid');
+
+                if (!emailPattern.test(email)) {
+                    $('#newsletterEmail').addClass('is-invalid');
+                    $('#newsletterError').text('Please enter a valid email address.').removeClass('text-white').addClass('text-danger');
+                } else {
+                    $('#newsletterError').text('Thank you for subscribing!').removeClass('text-white').addClass('text-success');
+                    $('#newsletterEmail').val('');
+                }
+            });
+
+            $('#newsletterEmail').on('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    $('#newsletterBtn').trigger('click');
+                }
+            });
+        });
+
+            <!-- scroll to top -->
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-to-top').fadeIn();
+        } else {
+            $('.back-to-top').fadeOut();
+        }
+    });
+    $('.back-to-top').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+           
+    </script>
+
+</body>
+</html>

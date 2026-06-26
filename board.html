@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #fcfcfc;">
+
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand  fw-bold fs-3 text-light" href="#" >PetCare</a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>     
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero & Search Booking Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center text-lg-start">
+                    <h1 class="display-5 fw-bold text-dark mb-3">Loving Pet Boarding In your Neighbourhood</h1>
+                    <p class="lead text-muted">Your Pet's Home Away from Home</p>
+                </div>
+                <div class="col-lg-7 py-5">
+                    <div class="search-card">
+                        <!-- Service Sub-Tabs -->
+                        <div class="row g-2 mb-4">
+                            <div class="col-6 col-md-3">
+                                <div class="service-tab-btn active">
+                                    <div class="small fw-bold">Overnight</div>
+                                    <div class="text-muted xs-text" style="font-size: 0.75rem;">While You're Away</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="service-tab-btn">
+                                    <div class="small fw-bold">Daycare</div>
+                                    <div class="text-muted xs-text" style="font-size: 0.75rem;">While You're at Work</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Form Filters -->
+                        <form>
+                            <div class="row g-3 px-2">   
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Check In Date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Check Out Date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+
+                                <div class="col-12 col-md-6 d-flex align-items-end">
+                                    <button type="submit" class="btn btn-orange w-100 py-2">Done</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Comprehensive Care Section -->
+    <div class="container py-5 my-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Comprehensive Care for every Dog and Cat</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+
+
+            <!-- Pet Boarding -->
+            <div class="col-md-4">
+                <div class="card h-100 care-card p-4 text-center">
+                    <div class="card-body">
+                        <div class="icon-circle text-primary py-2">
+                            <i class="fas fa-home fa-2x"></i>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Pet Boarding</h3>
+                        <p class="text-muted">Providing exceptional care for your pets at our Pet Boarding Facility, where they discover a Home away from Home equipped with modern amenities tailored for their comfort.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pet Hosting -->
+            <div class="col-md-4">
+                <div class="card h-100 care-card p-4 text-center">
+                    <div class="card-body">
+                        <div class="icon-circle text-success py-2">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Pet Hosting</h3>
+                        <p class="text-muted">Your pets enjoy a delightful stay at Pet Hero's warm and inviting home, where they are embraced as part of the family and experience a cozy, home-like atmosphere.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pet Sitting -->
+            <div class="col-md-4">
+                <div class="card h-100 care-card p-4 text-center">
+                    <div class="card-body">
+                        <div class="icon-circle text-warning py-2">
+                            <i class="fas fa-paw fa-2x"></i>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Pet Sitting</h3>
+                        <p class="text-muted">Your sitter provides dedicated care for your pets in the comfort of your own home, ensuring they receive all the attention they need without having to leave familiar surroundings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Discover local pet sitters and pet boarders</h2>
+                <p class="text-muted">Who'll care for your pets like their own family.</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="step-number">1</div>
+                    <h4 class="fw-bold">Search</h4>
+                    <p class="text-muted px-3">Search and connect with affectionate and trustworthy pet sitters and pet boarders perfectly matched for you.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-number">2</div>
+                    <h4 class="fw-bold">Book & Pay</h4>
+                    <p class="text-muted px-3">No need for cash – easily make secure online payments through our trusted platform safely.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-number">3</div>
+                    <h4 class="fw-bold">Relax</h4>
+                    <p class="text-muted px-3">Your pet enjoys endless fun, and you receive regular photo and video updates with 24/7 assistance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+         <!-- FAQs Start -->
+        <div class="container-fluid faq-section bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-2 align-items-center">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="h-100">
+                            <div class="mb-5">
+                                <h4 class="text-primary">Some Important FAQ's</h4>
+                                <h1 class="display-4 mb-0 fw-bold">Common Frequently Asked Questions</h1>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Q: Should I feed my dog homemade dog food?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body rounded">
+                                            A: What's the healthiest food for dogs? Increasingly, pet parents are exploring homemade dog food believing a more varied diet might be better. However...
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Q:Toxic foods for cats: what to avoid?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A: Your cat's physiology makes them particularly sensitive to certain chemicals and compounds. They can’t always detoxify these substances properly in their body, and this can result in serious health hazards.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Q:Essential nutrients for pets explained
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A:nutritionists have dedicated years to studying the nutrient requirements of cats and dogs. Curious about how these nutrients can benefit your pet's health?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                        <img src="images/a_high_resolution_photorealistic_indoor_living_ro.png" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQs End -->
+
+         <!-- to top -->
+     <a href="#" class="btn btn-lg btn-primary back-to-top">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+
+
+          <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-xl-9">
+                        <div class="mb-5">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-6 col-xl-5">
+                                    <div class="footer-item">
+                                        <a href="index.html" class="p-0">
+                                            <h3 class="text-white"><i class="fab fa-slack me-3"></i> Petshop</h3>
+                                            <!-- <img src="img/logo.png" alt="Logo"> -->
+                                        </a>
+                                        <p class="text-white mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                                         <div class="footer-btn d-flex">
+                                            <a class="btn btn-xl-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <div class="row g-4">
+
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Address</h4>
+                                                    <p class="mb-0 text-white">123 Street kerala<br>India</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fas fa-envelope fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Mail Us</h4>
+                                                    <p class="mb-0 text-white">info@example.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fa fa-phone-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Telephone</h4>
+                                                    <p class="mb-0 text-white">(+91)844565556</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Newsletter</h4>
+                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="position-relative rounded-pill mb-4">
+                                <input id="newsletterEmail" class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" required>
+                                <button type="button" id="newsletterBtn" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                                <div id="newsletterError" class="mt-2 small text-white"></div>
+                            </div>
+                            <div class="d-flex flex-shrink-0">
+                                <div class="footer-btn">
+                                    <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                                        <i class="fa fa-phone-alt fa-2x"></i>
+                                
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-column ms-3 flex-shrink-0">
+                                    <span class="text-white" >Call to Our Experts</span>
+                                    <a href="tel:+ 0123 456 7890"><span class="text-white">Free: +91 8685459565</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+
+     <!-- Footer Start -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>© 2026 Pet Care. All Rights Reserved.</p>
+    </footer>
+    <!-- Footer End -->
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="animations.js"></script>
+    <script>
+        $(document).ready(function() {
+           
+            function isInViewport(el) {
+                var elementTop = $(el).offset().top;
+                var elementBottom = elementTop + $(el).outerHeight();
+                var viewportTop = $(window).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            }
+
+           
+            function triggerAnimations() {
+                $('.wow').each(function() {
+                    if (isInViewport(this) && !$(this).hasClass('animate__animated')) {
+                        var animationClass = $(this).attr('class').split(' ').filter(function(cls) {
+                            return cls.startsWith('fadeIn') || cls.startsWith('slideIn') || cls.startsWith('zoomIn');
+                        })[0];
+                        $(this).addClass('animate__animated animate__' + animationClass);
+                    }
+                });
+            }
+
+            // Trigger on scroll
+            $(window).on('scroll', function() {
+                triggerAnimations();
+            });
+
+            $('#newsletterBtn').on('click', function () {
+                const email = $('#newsletterEmail').val().trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                $('#newsletterError').text('').removeClass('text-danger text-success').addClass('text-white');
+                $('#newsletterEmail').removeClass('is-invalid');
+
+                if (!emailPattern.test(email)) {
+                    $('#newsletterEmail').addClass('is-invalid');
+                    $('#newsletterError').text('Please enter a valid email address.').removeClass('text-white').addClass('text-danger');
+                } else {
+                    $('#newsletterError').text('Thank you for subscribing!').removeClass('text-white').addClass('text-success');
+                    $('#newsletterEmail').val('');
+                }
+            });
+
+            $('#newsletterEmail').on('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    $('#newsletterBtn').trigger('click');
+                }
+            });
+
+            // Trigger on page load
+            triggerAnimations();
+        });
+
+            <!-- scroll to top -->
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-to-top').fadeIn();
+        } else {
+            $('.back-to-top').fadeOut();
+        }
+    });
+    $('.back-to-top').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+           
+    </script>
+</body>
+</html>
+  

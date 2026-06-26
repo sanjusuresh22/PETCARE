@@ -286,6 +286,108 @@
     <script src="animations.js"></script>
     <script>
         $(document).ready(function() {
+            const namePattern = /^[A-Za-z\s.'-]{2,}$/;
+            const phonePattern = /^[6-9]\d{9}$/;
+            const pinCodePattern = /^\d{6}$/;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            function clearGroomErrors() {
+                $('#groomForm .form-error').text('');
+                $('#groomForm .form-control, #groomForm .form-select').removeClass('is-invalid');
+            }
+
+            function showGroomError(selector, message) {
+                $(selector).addClass('is-invalid');
+                $(selector + 'Error').text(message);
+            }
+
+            function focusFirstGroomError() {
+                const $firstError = $('#groomForm .is-invalid').first();
+
+                if ($firstError.length) {
+                    $('html, body').animate({
+                        scrollTop: $firstError.offset().top - 100
+                    }, 300);
+                    $firstError.focus();
+                }
+            }
+
+            $('#groomForm').on('submit', function(e) {
+                e.preventDefault();
+
+                clearGroomErrors();
+
+                let isValid = true;
+                const parentName = $('#parentName').val().trim();
+                const contactNo = $('#contactNo').val().trim();
+                const city = $('#city').val().trim();
+                const pinCode = $('#pinCode').val().trim();
+                const email = $('#email').val().trim();
+                const petType = $('#petType').val();
+                const petName = $('#petName').val().trim();
+                const petAge = $('#petAge').val().trim();
+                const gender = $('#gender').val();
+
+                if (!namePattern.test(parentName)) {
+                    showGroomError('#parentName', 'Please enter a valid full name.');
+                    isValid = false;
+                }
+
+                if (!phonePattern.test(contactNo)) {
+                    showGroomError('#contactNo', 'Please enter a valid 10-digit mobile number.');
+                    isValid = false;
+                }
+
+                if (city.length < 2 || !/^[A-Za-z\s.'-]+$/.test(city)) {
+                    showGroomError('#city', 'Please enter a valid city name.');
+                    isValid = false;
+                }
+
+                if (!pinCodePattern.test(pinCode)) {
+                    showGroomError('#pinCode', 'Please enter a valid 6-digit pincode.');
+                    isValid = false;
+                }
+
+                if (!emailPattern.test(email)) {
+                    showGroomError('#email', 'Please enter a valid email address.');
+                    isValid = false;
+                }
+
+                if (!petType) {
+                    showGroomError('#petType', 'Please select a pet type.');
+                    isValid = false;
+                }
+
+                if (!namePattern.test(petName)) {
+                    showGroomError('#petName', 'Please enter a valid pet name.');
+                    isValid = false;
+                }
+
+                if (petAge === '' || Number(petAge) < 0 || Number(petAge) > 30 || !Number.isInteger(Number(petAge))) {
+                    showGroomError('#petAge', 'Please enter a valid pet age between 0 and 30 years.');
+                    isValid = false;
+                }
+
+                if (!gender) {
+                    showGroomError('#gender', 'Please select your pet gender.');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    focusFirstGroomError();
+                    return;
+                }
+
+                alert('Grooming appointment booked successfully!');
+                this.reset();
+            });
+
+            $('#groomForm input, #groomForm select').on('input change', function() {
+                const fieldId = $(this).attr('id');
+
+                $(this).removeClass('is-invalid');
+                $('#' + fieldId + 'Error').text('');
+            });
            
             function isInViewport(el) {
                 var elementTop = $(el).offset().top;
